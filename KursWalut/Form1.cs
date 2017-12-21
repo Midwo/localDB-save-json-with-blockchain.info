@@ -31,7 +31,7 @@ namespace KursWalut
                 Reflesh = DateTime.Now.AddSeconds(Convert.ToDouble(nUDCoIleMinut.Value));
 
                 WebClient webClient = new WebClient();
-                var data = webClient.DownloadString("https://blockchain.info/com/ticker");
+                var data = webClient.DownloadString("https://blockchain.info/pl/ticker");
                 JObject jsonObject = JObject.Parse(data);
 
                 using (var db = new BitCoinContext())
